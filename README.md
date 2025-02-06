@@ -1,7 +1,14 @@
 # Serializer.luau Version: 1.0.0
+Configured for ROBLOX aswell as executors
 ## Config Documentation
 
 ## Usage
+executor:
+```lua
+
+```
+
+roblox:
 ```lua
 local __sr = require("./Serializer")
 local serializer = __sr.new(
