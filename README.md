@@ -19,14 +19,14 @@ TODO: Optimization, bug fixes, readability, implement more types.
 ## Usage
 executor:
 ```lua
-local __s = loadstring(game:HttpGet("https://raw.githubusercontent.com/LocalOneX/serializer/refs/heads/main/init.luau"))()
-local serializer = __sr.new({
+local __s = loadstring(game:HttpGet("https://raw.githubusercontent.com/LocalOneX/serializer/refs/heads/main/init.lua"))() 
+local serializer = __s({
 	debug_functions = true,
 	debug_typeclass = true, 
 	table_return_str = "test", 
 	disable_index = true
 })
-
+ 
 local test = {
 	hi = true,
 	[1] = false,
@@ -37,7 +37,7 @@ local test = {
 	math.huge,
 	Instance.new("Part")
 }
- 
+   
 setclipboard(serializer:serialize(test))
 ```
 
