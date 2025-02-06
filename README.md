@@ -2,11 +2,17 @@
 Configured for ROBLOX aswell as executors
 ## Config Documentation
 `debug_typeclass`: show '--[[type('class')]] on tables, vars, etc.
+
 `debug_functions`: grab and show upvalues for functions
+
 `disable_index`: remove [1] from tables ex: {[1] = true} = {true}
+
 `disable_json`: disables auto-json in serialize
+
 `disable_returntable`: removes 'return' from tables
+
 `table_return_str`: instead of 'return {}' it formats  local str = {} return str
+
 `format_cframe_vector`: instead of CFrame.new(1,1,1) it does CFrame.new(Vector3.new(1,1,1))
 
 ## Usage
