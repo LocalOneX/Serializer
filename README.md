@@ -1,5 +1,4 @@
-# Serializer.luau
-# Version: 1.0.0
+# Serializer.luau Version: 1.0.0
 
 ## -- config documentation
 
