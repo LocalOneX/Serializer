@@ -314,7 +314,13 @@ function module:s_table(tbl:tbl, lvl:number?):r
 		str = str .. s 
 	end
 	
-	str = str .. "\n}"  
+	str = str .. "\n"
+	local ending = "}"
+	if lvl > 1 then
+		ending = indent(ending, lvl-1)
+	end
+	
+	str = str .. ending
 	if not self.config.disable_returntable and isHead then
 		if self.config.table_return_str then
 			local st = tostring(self.config.table_return_str)
@@ -348,7 +354,9 @@ function module:serialize(val: any)
 end
 
 if isExecutor then
-	
+	return function (...)
+		return module.new(...)
+	end
 end
 
 function module:__call(...)
