@@ -1,5 +1,6 @@
 # Serializer.luau Version: 1.0.0
-Configured for ROBLOX aswell as executors
+Configured for ROBLOX aswell as executors.
+TODO: Optimization, bug fixes, readability, implement more types.
 ## Config Documentation
 `debug_typeclass`: show '--[[type('class')]] on tables, vars, etc.
 
