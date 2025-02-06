@@ -37,9 +37,8 @@ local test = {
 	math.huge,
 	Instance.new("Part")
 }
-
-warn(serializer)
-print(serializer:serialize(test))
+ 
+setclipboard(serializer:serialize(test))
 ```
 
 roblox:
@@ -62,7 +61,6 @@ local test = {
 	math.huge,
 	Instance.new("Part")
 }
-
-warn(serializer)
+ 
 print(serializer:serialize(test))
 ```
