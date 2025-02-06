@@ -76,8 +76,7 @@ local header = table.concat(h, "\n")
 
 local function default() return "ROBLOX" end
 local f = (function() return identifyexecutor or getexecutorname or whatexecutor or default end)()
-local EXECUTOR_NAME = f()
-warn(EXECUTOR_NAME)
+local EXECUTOR_NAME = f() 
 local isExecutor = EXECUTOR_NAME ~= "ROBLOX"
 local defaultConfig = {}
 
@@ -358,7 +357,7 @@ if isExecutor then
 		local self = module.new(...)
 		
 		return {
-			serialize = function(self, ...)
+			serialize = function(s, ...)
 				return self:serialize(...)
 			end,
 		}
