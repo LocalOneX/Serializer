@@ -108,7 +108,7 @@ function module.new(config: config|nil)
 	end
 	
 	if EXECUTOR_NAME ~= "ROBLOX" then
-		head = head .. indent("@executor: "..EXECUTOR_NAME)
+		head = head .. "\n" .. indent("@executor: "..EXECUTOR_NAME)
 	end
 	
 	head = head .. "\n]=]--\n\n"
@@ -245,7 +245,7 @@ function module:s_function(f:f, lvl:number?):r
 			upvalues = upvalues .. "]=]--"
 			str = str .. upvalues .. "\n"
 		else
-			str = str .. indent("--"..EXECUTOR_NAME.."doesn't support 'debug.getupvalues'.",lvl)
+			str = str .. indent("--"..EXECUTOR_NAME.." doesn't support 'debug.getupvalues'.",lvl)
 		end 
 	end
 	
@@ -358,7 +358,7 @@ if isExecutor then
 		local self = module.new(...)
 		
 		return {
-			serialize = function(...)
+			serialize = function(self, ...)
 				return self:serialize(...)
 			end,
 		}
