@@ -1,8 +1,8 @@
 # Serializer.luau Version: 1.0.0
 
-## -- config documentation
+## Config Documentation
 
-## -- usage
+## Usage
 ```lua
 local __sr = require("./Serializer")
 local serializer = __sr.new(
