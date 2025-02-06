@@ -90,6 +90,8 @@ local test = {
 }
  
 print(serializer:serialize(test))
+
+---OUTPUT
 --[=[
     @LocalOnex
     @repository: https://github.com/LocalOneX/serializer
@@ -115,6 +117,5 @@ local test = {
 }
 
 return test
----OUTPUT
 
 ```
