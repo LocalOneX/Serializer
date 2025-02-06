@@ -336,8 +336,7 @@ end
 function module:serialize(val: any)
 	--assert(typeof(method) == "string", "[Serializer] param 'method' must be 'string'!")
 	
-	local class = typeof(val) 
-	warn(game.HttpService:JSONDecode(self))
+	local class = typeof(val)  
 	if self.config.disable_json ~= true and class == "string" then
 		if select(1, pcall(decode, val)) == true then
 			class = "table"
@@ -356,7 +355,13 @@ end
 
 if isExecutor then
 	return function (...)
-		return module.new(...)
+		local self = module.new(...)
+		
+		return {
+			serialize = function(...)
+				return self:serialize(...)
+			end,
+		}
 	end
 end
 
