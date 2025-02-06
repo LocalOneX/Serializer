@@ -1,5 +1,4 @@
 # Serializer.luau Version: 1.0.0
-
 ## Config Documentation
 
 ## Usage
