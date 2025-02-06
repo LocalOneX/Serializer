@@ -11,9 +11,12 @@ executor:
 roblox:
 ```lua
 local __sr = require("./Serializer")
-local serializer = __sr.new(
-	{debug_functions =true,debug_typeclass = true, table_return_str = "test", disable_index = true}
-)
+local serializer = __sr.new({
+	debug_functions = true,
+	debug_typeclass = true, 
+	table_return_str = "test", 
+	disable_index = true
+})
 
 local test = {
 	hi = true,
