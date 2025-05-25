@@ -50,19 +50,19 @@ setclipboard(serializer:serialize(test))
         debug_functions: true
         disable_index: true
         debug_typeclass: true
+    @executor: Solara
 ]=]--
 
 
 local test = {
-    test = {
-        test = {
-            1 --[[type('number')]],
-            test = {
-                work = false --[[type('boolean')]]
-            } --[[type('table')]]
-        } --[[type('table')]],
-        working = true --[[type('boolean')]]
-    } --[[type('table')]]
+    Vector3.one --[[type('Vector3')]],
+    math.huge --[[type('number')]],
+    Instance.new("Part") --[[Possibly inaccurate]] --[[type('Instance')]],
+    hi = true --[[type('boolean')]],
+    a1 = function()
+        --Solara doesn't support 'debug.getupvalues'.
+        --unable to extract inner
+    end --[[type('function')]]
 }
 
 return test 
@@ -92,7 +92,7 @@ local test = {
 print(serializer:serialize(test))
 
 ---OUTPUT
---[=[
+ --[=[
     @LocalOnex
     @repository: https://github.com/LocalOneX/serializer
     @decumentation: https://raw.githubusercontent.com/LocalOneX/serializer/refs/heads/main/README.md
@@ -101,21 +101,20 @@ print(serializer:serialize(test))
         debug_functions: true
         disable_index: true
         debug_typeclass: true
-    @executor: Solara
 ]=]--
 
 
 local test = {
-    Vector3.one --[[type('Vector3')]],
-    math.huge --[[type('number')]],
-    Instance.new("Part") --[[Possibly inaccurate]] --[[type('Instance')]],
-    hi = true --[[type('boolean')]],
-    a1 = function()
-        --Solara doesn't support 'debug.getupvalues'.
-        --unable to extract inner
-    end --[[type('function')]]
+    test = {
+        test = {
+            1 --[[type('number')]],
+            test = {
+                work = false --[[type('boolean')]]
+            } --[[type('table')]]
+        } --[[type('table')]],
+        working = true --[[type('boolean')]]
+    } --[[type('table')]]
 }
 
-return test
-
+return test 
 ```
