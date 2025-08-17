@@ -7,7 +7,7 @@ Basic usage:
 	Serializer({
 		test = {
 			test = {
-				test = {"test", "test", "test"_
+				test = {"test", "test", "test"}
 			}
 		}
 	})
